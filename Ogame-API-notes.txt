@@ -11,9 +11,9 @@ Build rekuests
 		3 = Deuterium Mine
 		4 = Solar Plant
 		12 = Fusion Reactor
-		22 = Metal Mine
-		23 = Crystal Mine
-		24 = Deuterium Mine
+		22 = Metal Storage
+		23 = Crystal Storage
+		24 = Deuterium Storage
 	D	212 = Solar Satellite
 	D	401 = Rocket Launcher
 		( \TODO Add rest )
