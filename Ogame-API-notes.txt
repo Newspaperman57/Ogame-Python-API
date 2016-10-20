@@ -1,0 +1,40 @@
+Build rekuests
+	// If SendBuildRekuest is called with url == null, a form is sent with deprecated token instead. See token
+
+	modus = UNKNOWN. Seen as: 1
+	menge = Number of items to build. Only usable for Shipyard and defense. Must be 1 otherwise
+
+	types:
+		// If there's a D in front of a type, it's used with deprecated token. See Token
+		1 = Metal Mine
+		2 = Crystal Mine
+		3 = Deuterium Mine
+		4 = Solar Plant
+		12 = Fusion Reactor
+		22 = Metal Mine
+		23 = Crystal Mine
+		24 = Deuterium Mine
+	D	212 = Solar Satellite
+	D	401 = Rocket Launcher
+		( \TODO Add rest )
+
+token
+	Token is some form of authentication. 
+	
+	There is a new token and a deprecated token.
+	
+	New token is used with GET and params.
+	Deprecated token is used with POST and data.
+	Both tokens are not neccessarily present on a site.
+
+	Token is only valid for buildings/ships/structures possible to build on that tab (Can't build rocketlauncher from resourcesTab), so you must load tab with 
+
+	New token is used for buildings ( \TODO Maybe research? ) Regex (\TODO Needs redoing): token=([a-zA-Z0-9]{32})
+	Deprecated token is used for Shipyard and defence. Regex: name="token" value="([a-zA-Z0-9]{32})"
+
+page
+	Which tab is to be loaded.
+	"resources": Resources. Building mines and storage buildings and solar satellite
+	"overview": Overview. First page when logged in. Get basic data about current production and active fleets
+	"defense": Defence. Building defence structures
+	( \TODO Add rest )
